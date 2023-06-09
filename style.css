@@ -9,7 +9,7 @@
   --bg-url: url(./assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
-  --surface-color-hover: rgba(255, 255, 255, 0.02);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/moon-stars.svg);
 }
@@ -41,6 +41,7 @@ body * {
   padding: 0 24px;
 }
 
+/* profile */
 #profile {
   text-align: center;
   padding: 24px;
@@ -56,6 +57,7 @@ body * {
   margin-top: 8px;
 }
 
+/* switch */
 #switch {
   position: relative;
   width: 64px;
@@ -75,6 +77,7 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
   animation: slide-back 0.2s;
 }
 
@@ -97,22 +100,28 @@ body * {
   border-radius: 9999px;
 }
 
+/* links */
 ul {
   list-style: none;
+
   display: flex;
   flex-direction: column;
   gap: 16px;
+
   padding: 24px 0;
 }
 
 ul li a {
-  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding: 16px 24px;
+
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 
@@ -122,15 +131,19 @@ ul li a {
   transition: background 0.2s;
 }
 
-ul li a :hover {
+/* pseudo-selector */
+ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
 }
 
+/* social links */
 #social-links {
   display: flex;
   justify-content: center;
+
   padding: 24px 0;
+
   font-size: 24px;
 }
 
@@ -139,6 +152,7 @@ ul li a :hover {
   align-items: center;
   justify-content: center;
   padding: 16px;
+
   transition: background 0.2s;
   border-radius: 50%;
 }
@@ -153,16 +167,18 @@ footer {
   font-size: 14px;
 }
 
+/* media queries */
 @media (min-width: 700px) {
   :root {
     --bg-url: url(./assets/bg-desktop.jpg);
   }
 
   .light {
-    --bg-url: url(./assets/bg-desktop-ligth.jpg);
+    --bg-url: url(./assets/bg-desktop-light.jpg);
   }
 }
 
+/* animation */
 @keyframes slide-in {
   from {
     left: 0;
